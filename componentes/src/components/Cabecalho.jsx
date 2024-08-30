@@ -3,7 +3,7 @@ import './Cabecalho.css'
 function Cabecalho() {
   return (
     <div className="Cabecalho-container">
-      <h1>O melhor cabeçalho do SENAI</h1>
+      <h1>Pitchulinha Contente</h1>
     </div>
   )
 }
