@@ -5,7 +5,7 @@ function CopoDois() {
     const [resultado, setResultado] = useState('');
 
     const verificador = () => {
-        const num = parseInt(numero, 10); 
+        const num = parseInt(numero, 10);
 
         if (isNaN(num)) {
             setResultado('Por favor, digite um número válido.');
@@ -27,7 +27,7 @@ function CopoDois() {
             mensagem = 'Número Nulo.';
         }
 
-        setResultado(mensagem); 
+        setResultado(mensagem);
     };
 
     return (

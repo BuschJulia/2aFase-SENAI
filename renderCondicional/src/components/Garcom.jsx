@@ -1,88 +1,62 @@
-import { useState } from 'react'
-import './Garcom531.css'
-import RelatorioEmprestimo from './RelatorioEmprestimo'
+import React, { useState } from 'react';
+import './Garcom.css'
+import SituacaoEmprestimo from './SituacaoEmprestimo'
 
-function Garcom531() {
-    const [inputSalario, setInputSalario] = useState('')
-    const [inputEmprestimo, setInputEmprestimo] = useState('')
-    const [inputPrestacoes, setInputPrestacoes] = useState('')
-    const [stateRelatorio, setStateRelatorio] = useState()
+function Garcom() {
+    const [salario, setSalario] = useState('');
+    const [emprestimo, setEmprestimo] = useState('');
+    const [parcelas, setParcelas] = useState('');
+    const [situacao, setSituacao] = useState('');
 
-    function analisarEmprestimo(){
-        let valorMaximoPrestacao = inputSalario * 0.3
-        let valorPrestacao = inputEmprestimo / inputPrestacoes
-        if(valorPrestacao < valorMaximoPrestacao){
-            // alert("Deu boa")
-            let infosRelatorio = {
-                situacao: "aprovado",
-                maxPrestacao: valorMaximoPrestacao,
-                prestacao: valorPrestacao,
-                emprestimo: inputEmprestimo,
-                prestacoes: inputPrestacoes
-            }
-            setStateRelatorio(infosRelatorio)
-        }else{
-            // alert("Deu ruim")
-            let infosRelatorio = {
-                situacao: "reprovado",
-                maxPrestacao: valorMaximoPrestacao,
-                prestacao: valorPrestacao,
-                emprestimo: inputEmprestimo,
-                prestacoes: inputPrestacoes
-            }
-            setStateRelatorio(infosRelatorio)
+    function analisarEmprestimo() {
+        const salarioNum = parseFloat(salario);
+        const emprestimoNum = parseFloat(emprestimo);
+        const parcelasNum = parseInt(parcelas, 10);
+
+        if (salarioNum <= 0 || emprestimoNum <= 0 || parcelasNum <= 0) {
+            setSituacao('Valores devem ser positivos e diferentes de zero.');
+            return;
+        }
+
+        const valorParcela = emprestimoNum / parcelasNum;
+        const maximoParcelas = salarioNum * 0.3;
+
+        if (valorParcela <= maximoParcelas) {
+            setSituacao('Empréstimo Aprovado!');
+        } else {
+            setSituacao('Empréstimo Negado!');
         }
     }
-  return (
-    <div className='garcom-container'>
-        <label htmlFor="inpSalario">Salario</label>
-        <input type="text" id='inpSalario'
-            value={inputSalario}
-            onChange={ (event) => setInputSalario(event.target.value) }
+
+    return (
+        <div className='garcom-container'>
+            <label htmlFor="inpSalario">Salário</label>
+            <input
+                type="text"
+                id='inpSalario'
+                value={salario}
+                onChange={(event) => setSalario(event.target.value)}
             />
-        <label htmlFor="inpEmprestimo">Valor do empréstimo:</label>
-        <input type="text" id='inpEmprestimo'
-            value={inputEmprestimo}
-            onChange={ (event) => setInputEmprestimo(event.target.value) }
+            <label htmlFor="inpEmprestimo">Valor do empréstimo:</label>
+            <input
+                type="text"
+                id='inpEmprestimo'
+                value={emprestimo}
+                onChange={(event) => setEmprestimo(event.target.value)}
             />
-        <label htmlFor="inpPrestacoes">Qtd de prestações</label>
-        <input type="text" id='inpPrestacoes'
-            value={inputPrestacoes}
-            onChange={ (event) => setInputPrestacoes(event.target.value) }
-        />
+            <label htmlFor="inpPrestacoes">Qtd de prestações:</label>
+            <input
+                type="text"
+                id='inpPrestacoes'
+                value={parcelas}
+                onChange={(event) => setParcelas(event.target.value)}
+            />
 
-        <button onClick={analisarEmprestimo}>Analisar empréstimo</button>
+            <button onClick={analisarEmprestimo}>Analisar empréstimo</button>
 
-        {stateRelatorio && 
-            <RelatorioEmprestimo infos={ stateRelatorio } />
-        }
-
-
-        {/* {inputSalario}
-        {inputEmprestimo}
-        {inputPrestacoes} */}
-
-    </div>
-  )
+            {situacao && <div>{situacao}</div>}
+        </div>
+    );
 }
 
-export default Garcom531
-
-// 5.31 - Não tem garçom de cara feia: 
-// Uma empresa abriu uma linha de 
-// crédito para os funcionários. O valor da prestação não pode ultrapassar 
-// 30% do salário. Faça um programa que receba o salário, o valor do 
-// empréstimo e o número de prestações e informe se o empréstimo pode ser 
-// concedido. Nenhum dos valores informados pode ser zero ou negativo.
-
-// entradas: 
-//     - salario
-//     - valorEmprestimo
-//     - numeroPrestacoes
-
-// processamento:
-//     - calcular o valor da prestação (valorEmprestimo / numeroPrestacoes)
-//     - comparar valorPrestacao < salario*0.3
-
-// saída:
-//     - autoriza ou nega o empréstimo
+export default Garcom;
