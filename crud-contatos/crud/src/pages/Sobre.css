@@ -1,0 +1,62 @@
+.container-about {
+    display: flex;
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    /* Alinha a imagem e o texto no topo */
+    gap: 20px;
+    /* Espaçamento entre a imagem e o texto */
+}
+
+.profile-image {
+    width: 591.03;
+    height: 592.281px;
+    flex-shrink: 0;
+}
+
+.container-texts {
+    display: flex;
+    flex-direction: column;
+    /* Coloca os textos em coluna */
+}
+
+.sobre-title {
+    display: flex;
+    gap: 10px;
+    /* Espaço entre "Sobre" e "Mim" */
+}
+
+.sobre-text {
+    color: #000;
+    font-family: 'Sora', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: -0.4px;
+}
+
+.sobreText-bold {
+    color: #000;
+    font-family: 'Sora', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 56px;
+    letter-spacing: -0.4px;
+}
+
+p {
+    color: #71717A;
+    font-family: 'Sora', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+}

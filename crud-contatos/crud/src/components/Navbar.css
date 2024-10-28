@@ -1,7 +1,68 @@
-.navbar{
+@font-face {
+    font-family: 'Sora';
+    src: url('./fonts/Sora-Regular.woff2') format('woff2'),
+        url('./fonts/Sora-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('./fonts/Sora-Bold.woff2') format('woff2'),
+        url('./fonts/Sora-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.container-navbar {
+    padding: 1.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 25px;
     min-width: 100vw;
+    color: inherit;
+    color: var(--Primary-Black, #000);
+    font-family: Sora;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    text-transform: capitalize;
+}
+
+.button-navbar {
+    border: #5900D6;
+    border-radius: 4px;
+    background: #5900D6;
+    display: inline-flex;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--Primary-White, #FFF);
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+    transition: background 0.5s, color 0.5s, border-color 0.5s; /* Adicionado */
+}
+
+.button-navbar:hover {
+    background: #fafafa;
+    border: 1px solid #5900D6; /* Corrigido */
+    color: #5900D6;
+}
+
+a {
+    color: #000 ;
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    transition: background 0.5s, color 0.5s, border-color 0.5s;
 }
