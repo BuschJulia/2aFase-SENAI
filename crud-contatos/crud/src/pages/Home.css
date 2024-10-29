@@ -1,0 +1,27 @@
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha verticalmente no centro */
+    margin-bottom: 20px; /* Espaço abaixo */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: row; /* Coloca os textos em coluna */
+}
+
+.profile-image {
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção */
+}
+
+.info {
+    display: flex;
+    flex-direction: column; /* Coloca os textos em coluna */
+    margin-bottom: 20px; /* Espaço abaixo */
+}
+
+.social-media {
+    display: flex;
+    gap: 10px; /* Espaço entre os ícones */
+}

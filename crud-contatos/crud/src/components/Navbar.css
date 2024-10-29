@@ -1,21 +1,4 @@
-@font-face {
-    font-family: 'Sora';
-    src: url('./fonts/Sora-Regular.woff2') format('woff2'),
-        url('./fonts/Sora-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Sora';
-    src: url('./fonts/Sora-Bold.woff2') format('woff2'),
-        url('./fonts/Sora-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
 .container-navbar {
-    padding: 1.5rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;

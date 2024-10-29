@@ -1,15 +1,13 @@
 import React from 'react';
-import Julia from '/src/assets/images/julinha.png';
-import Navbar from "../components/Navbar";
+import Julia2 from '/src/assets/images/julinha2.png';
 import './Sobre.css';
 
 function Sobre() {
     return (
         <div>
-            <Navbar />
             <div className='container-about'>  
                 <div className="content">
-                    <img src={Julia} alt="Mini Juju" className="profile-image" />
+                    <img src={Julia2} alt="Mini Juju" className="profile-image" />
                     <div className="container-texts">
                         <div className="sobre-title">
                             <h1 className='sobre-text'>Sobre</h1>
