@@ -3,7 +3,6 @@
     justify-content: flex-end;
     align-items: center;
     gap: 6rem;
-    min-width: 100vw;
     color: inherit;
     color: var(--Primary-Black, #000);
     font-family: Sora;
