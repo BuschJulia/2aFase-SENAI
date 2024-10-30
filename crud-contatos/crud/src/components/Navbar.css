@@ -2,7 +2,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 25px;
+    gap: 6rem;
     min-width: 100vw;
     color: inherit;
     color: var(--Primary-Black, #000);
@@ -12,6 +12,10 @@
     line-height: 24px;
     letter-spacing: -0.4px;
     text-transform: capitalize;
+
+    /* Adicionando espaço */
+    padding: 10px 40px; /* Ajuste os valores conforme necessário */
+    box-sizing: border-box; /* Garantir que padding não afete a largura total */
 }
 
 .button-navbar {
@@ -30,22 +34,23 @@
     line-height: 24px;
     letter-spacing: 0.4px;
     text-transform: capitalize;
-    transition: background 0.5s, color 0.5s, border-color 0.5s; /* Adicionado */
+    transition: background 0.5s, color 0.5s, border-color 0.5s;
 }
 
 .button-navbar:hover {
     background: #fafafa;
-    border: 1px solid #5900D6; /* Corrigido */
+    border: 1px solid #5900D6;
     color: #5900D6;
 }
 
 a {
-    color: #000 ;
-    font-family: 'Sora', sans-serif;
+    color: #000;
+    font-family: Sora;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
     letter-spacing: -0.4px;
+    text-transform: capitalize;
     transition: background 0.5s, color 0.5s, border-color 0.5s;
 }

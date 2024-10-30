@@ -12,22 +12,26 @@ function Home() {
     return (
         <div>
             <Navbar />
-            <div className="intro">
-                <div className="text-container">
-                    <h1>Olá, eu sou</h1>
-                    <h1>Júlia Busch</h1>
-                </div>
-                <img src={Julia} alt="mini julinha" className="profile-image" />
-            </div>
+            <div className="container-home">
+                <div className="container-home-left">
+                    <div className="ola">
+                        <h1 className="home-text">Olá, eu sou</h1>
+                        <h1 className="homeText-bold">Júlia Busch</h1>
+                    </div>
 
-            <div className="info">
-                <div className="text-container">
-                    <h1>Estudante de</h1>
-                    <h1>Full Stack</h1>
+                    <div className="estudante">
+                        <h1 className="homeText-bold">Estudante de</h1>
+                        <h1 className="full-stack">Full Stack</h1>
+                    </div>
+
+                    <div className="resido">
+                        <h1 className="home-text">Resido no</h1>
+                        <h1 className="homeText-bold">Brasil</h1>
+                    </div>
                 </div>
-                <div className="text-container">
-                    <h1>Resido no</h1>
-                    <h1>Brasil</h1>
+
+                <div className="container-home-right">
+                    <img src={Julia} alt="mini julinha" className="imagem-julia" />
                 </div>
             </div>
 

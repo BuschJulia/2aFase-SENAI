@@ -1,27 +1,69 @@
-.intro {
+.container-home {
     display: flex;
-    justify-content: space-between;
-    align-items: center; /* Alinha verticalmente no centro */
-    margin-bottom: 20px; /* Espaço abaixo */
+    justify-content: center;
+    align-items: center;
+    gap: 25rem;
+    box-sizing: border-box;
+    margin: -9rem;
 }
 
-.text-container {
-    display: flex;
-    flex-direction: row; /* Coloca os textos em coluna */
+
+.full-stack {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #000;
+    font-family: Sora;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 56px;
+    /* 116.667% */
+    letter-spacing: -0.96px;
 }
 
-.profile-image {
-    width: 200px; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção */
+.home-text {
+    color: #000;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: -0.4px;
 }
 
-.info {
-    display: flex;
-    flex-direction: column; /* Coloca os textos em coluna */
-    margin-bottom: 20px; /* Espaço abaixo */
+.homeText-bold {
+    color: #000;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 56px;
+    letter-spacing: -0.4px;
 }
 
-.social-media {
+.ola {
     display: flex;
-    gap: 10px; /* Espaço entre os ícones */
+    gap: 10px;
+}
+
+.estudante {
+    display: flex;
+    gap: 10px;
+}
+
+.resido {
+    display: flex;
+    gap: 10px;
+}
+
+.imagem-julia {
+    width: 518.36px;
+    height: 592.28px;
+    padding: 1rem 1rem;
+    margin-top: 18.8rem;
+
+}
+
+.social-media{
+    display: flex;
+    justify-content: initial;
+    margin: 11.9rem;
+    margin-top: -9.7rem;
 }
