@@ -4,10 +4,14 @@ import { GlobalContext } from "../contexts/GlobalContext";
 import Julia from '../assets/images/julinha.png';
 import LinkedIn from '../assets/images/linkedin.svg';
 import Instagram from '../assets/images/instagram.svg';
-import './Home.css'; // Importando o CSS
+import './Home.css'; // Importing the CSS
 
 function Home() {
     const { usuarioLogado } = useContext(GlobalContext);
+
+    const handleSocialMediaClick = (url) => {
+        window.open(url, '_blank');
+    };
 
     return (
         <div>
@@ -36,8 +40,16 @@ function Home() {
             </div>
 
             <div className="social-media">
-                <img src={LinkedIn} alt="Logo LinkedIn" />
-                <img src={Instagram} alt="Logo Instagram" />
+                <img 
+                    onClick={() => handleSocialMediaClick("https://br.linkedin.com/in/j%C3%BAlia-bandeira-busch-7525842b6")} 
+                    src={LinkedIn} 
+                    alt="Logo LinkedIn" 
+                />
+                <img 
+                    onClick={() => handleSocialMediaClick("https://www.instagram.com/busch.juliaa/?locale=es_US%3FICID%3DBLOG_MBF_ES&hl=en")} 
+                    src={Instagram} 
+                    alt="Logo Instagram" 
+                />
             </div>
         </div>
     );

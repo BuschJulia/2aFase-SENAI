@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+    width: 1512px;
+    height: 1824px;
+}
+
+.projeto-text{
+    color: #000;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: -0.4px;
+}
+
+.projetoText-bold{
+    color: #000;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 56px;
+    letter-spacing: -0.4px;
+}
